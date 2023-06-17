@@ -52,10 +52,10 @@ window.addEventListener("scroll", function () {
   let value = window.scrollY;
   console.log("scrollY", value);
 
-  if (4350 > value) {
+  if (4310 > value) {
     sect05left.style.animation = "out03 1s ease-out forwards";
   }
-  if (4350 < value) {
+  if (4310 < value) {
     sect05left.style.animation = "left02 1s ease-out forwards";
   }
 });
@@ -78,6 +78,15 @@ $('.shadow').mouseup(function (e) {
   if ($(".popup_box03").has(e.target).length === 0) {
     $(".popup_box03").fadeOut();
   }
+  if ($(".popup_box04").has(e.target).length === 0) {
+    $(".popup_box04").fadeOut();
+  }
+  if ($(".popup_box05").has(e.target).length === 0) {
+    $(".popup_box05").fadeOut();
+  }
+  if ($(".popup_box06").has(e.target).length === 0) {
+    $(".popup_box06").fadeOut();
+  }
 });
 
 
@@ -87,6 +96,10 @@ $(".btn_close").click(function () {
   $(".popup_box").fadeOut();
   $(".popup_box02").fadeOut();
   $(".popup_box03").fadeOut();
+  $(".popup_box04").fadeOut();
+  $(".popup_box05").fadeOut();
+  $(".popup_box06").fadeOut();
+
   $(".shadow").hide();
   $("body").removeClass("notScroll");
 });
@@ -116,6 +129,59 @@ $(".productpage").click(function () {
   $(".popup_box03").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
+});
+
+$(".sakari").click(function () {
+  $(".popup_box04").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".dior").click(function () {
+  $(".popup_box05").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".leaflet").click(function () {
+  $(".popup_box06").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+
+$(".hamburger").click(function () {
+  $(this).addClass('active')
+  $(".nav_cross").addClass("active")
+  $(".side_nav").stop().slideDown()
+
+});
+$(".nav_cross").click(function () {
+  $(this).removeClass('active')
+  $(".hamburger").removeClass("active")
+  $(".side_nav").stop().slideUp()
+
+});
+
+// $(".hamburger").click(function () {
+//   if ($("header .hamburger.active").hasClass("active") == true) {
+//     $("header .hamburger.active").removeClass("active");
+//   } else {
+//     $("header .langue_ko").addClass("active");
+//     // $(this).addClass("active");
+//   }
+// });
+
+
+
+$(".langue_arr").click(function () {
+  if ($("header .langue_ko.active").hasClass("active") == true) {
+    $("header .langue_ko.active").removeClass("active");
+    $(this).removeClass("active");
+  } else {
+    $("header .langue_ko").addClass("active");
+    $(this).addClass("active");
+  }
 });
 
 
