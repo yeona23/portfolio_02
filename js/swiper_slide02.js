@@ -46,7 +46,27 @@ const swiper_popup02 = new Swiper(".popup02", {
   },
   keyboard: true,
 });
-
+const swiper_popup04 = new Swiper(".popup04", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+const swiper_popup05 = new Swiper(".popup05", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+const swiper_popup06 = new Swiper(".popup06", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
 // var clickEvent = $('#ddkaBtn').on('click', function() {
 //   let anything = $('#name').val();
 //   // 'jdkjakdsg@akd.kr';
