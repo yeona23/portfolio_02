@@ -12,7 +12,6 @@ body {
   /* font-family: 'Nanum Gothic', sans-serif; */
   font-family: "Cafe24Simplehae";
 }
-
 #wrap {
   width: 100%;
   overflow: hidden;
@@ -38,10 +37,10 @@ h2 {
   height: 2px;
 }
 #uiux {
-  height: 65px;
+  height: 105px;
 }
 #contact {
-  height: 75px;
+  height: 100px;
 }
 /* HEADER */
 header {
@@ -467,11 +466,34 @@ main .sect03 .bg_circle06 {
   width: inherit;
   height: inherit;
 }
+/* 
+.video-popup .video-wrapper {
+  position: relative;
+  width: 80%;
+  padding-bottom: 45%;
+  z-index: 10;
+}
+
+.video-popup .video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video-popup.reveal .video-popup-closer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+} */
 main .sect03 .popup_box {
   width: 90%;
-  height: 90vh;
   text-align: center;
   position: fixed;
+
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -482,42 +504,24 @@ main .sect03 .popup_box {
   box-shadow: 0 0 25px #25252557;
   display: none;
 }
-main .sect03 .popup_box02 {
-  width: 90%;
-  height: 90vh;
-  text-align: center;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  z-index: 100000;
-  overflow: hidden;
-  border-radius: 30px;
-  background-color: #fff;
-  box-shadow: 0 0 25px #25252557;
-  display: none;
-}
-main .sect03 .popup_close {
+main .sect03 .btn_close {
   position: absolute;
   top: 40px;
   right: 50px;
-  z-index: 10000000;
-}
-main .sect03 .popup_close .btn_close{
   border: 0;
   background: transparent;
   cursor: pointer;
+  z-index: 10000000000;
 }
 .shadow {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #25252594;
-  filter: blur(7px) ;
+  filter: blur(4px) grayscale(50%);
   width: 100%;
   height: 100vh;
   display: none;
-  z-index: 1000;
+  /* z-index: 10000000; */
 }
 .notScroll {
   overflow: hidden;
@@ -525,45 +529,17 @@ main .sect03 .popup_close .btn_close{
   height: 100vh;
   touch-action: none;
 }
-main .sect03 .popup_box03{
-  width: 90%;
-  height: 90vh;
-  text-align: center;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  z-index: 100000;
-  overflow: hidden;
-  border-radius: 30px;
-  background-color: #fff;
-  box-shadow: 0 0 25px #25252557;
-  display: none;
-  overflow-y: hidden;
-  scrollbar-width: 0;
-  
-}
-main .sect03 .popup03 {
-  /* width: inherit; */
-  height: inherit;
-  overflow-y: scroll;
-  background-color: #fff;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
-}
-.popup_box03 .popup03::-webkit-scrollbar {
-  display: none;
-}
+/* main .sect03 .popup01 .swiper-slide:first-child img {
+  width: 50%;
+  height: 50%;
+} */
 /* SECTION04 */
 main .sect04 {
   position: relative;
   margin-bottom: 100px;
 }
 main .sect04 .inner {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 main .sect04 ul {
   font-size: 25px;
@@ -780,22 +756,6 @@ main .sect05 button {
   left: -305px;
   z-index: -10;
 }
-@keyframes left02 {
-  from {
-    left: -830px;
-  }
-  to {
-    left: -452px;
-  }
-}
-@keyframes out03 {
-  from {
-    left: -452px;
-  }
-  to {
-    left: -830px;
-  }
-}
 /* FOOTER */
 footer {
   width: 100%;
@@ -922,7 +882,7 @@ footer .top {
     font-family: "Poppins", sans-serif;
   }
   main .sect05 h2 {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
   main .sect05 .contact_text {
     font-family: "SCoreDream";
