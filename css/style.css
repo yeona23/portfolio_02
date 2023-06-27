@@ -32,13 +32,13 @@ h2 {
   font-family: "Poppins", sans-serif;
 }
 #about {
-  height: 60px;
+  height: 90px;
 }
 #design {
   height: 2px;
 }
 #uiux {
-  height: 65px;
+  height: 100px;
 }
 #contact {
   height: 75px;
@@ -61,19 +61,55 @@ header .inner {
   position: relative;
 }
 header p {
-  font-size: 20pt;
+  font-size: 19pt;
   font-weight: 400;
   margin-left: 10px;
 }
 header .main_nav {
-  width: 160px;
+  width: 400px;
 }
-header .main_nav ul li {
+header .main_nav li a {
   font-size: 15pt;
   margin-right: 25px;
+  overflow: hidden;
+  display: block;
 }
-header .main_nav ul li:last-child {
+header .main_nav a:last-child {
   margin-right: 0;
+}
+header ul li.show {
+  color: #a75a50;
+}
+header ul li.show::after {
+  left: 0;
+}
+header .main_nav a:hover {
+  color: #a75a50;
+  font-weight: 600;
+}
+header .main_nav a::after {
+  content: "";
+  position: relative;
+  height: 2px;
+  background: #a75a50;
+  display: block;
+  width: 100%;
+  left: -100%;
+  z-index: -1;
+  transition: all 0.5s;
+  top: 90%;
+}
+
+header .main_nav a:hover::after {
+  left: 0;
+}
+
+header .main_nav a.active {
+  color: #a75a50;
+  font-weight: 600;
+}
+header .main_nav a.active::after {
+  left: 0;
 }
 header .hamburger,
 .nav_cross {
@@ -87,7 +123,7 @@ header .hamburger,
   height: 100vh;
   backdrop-filter: blur(5px);
   background-color: #ffffff56;
-  top: 71px;
+  top: 55px;
   right: 0;
   text-align: center;
   z-index: 10000000;
@@ -98,9 +134,6 @@ header .hamburger,
   justify-content: space-evenly;
   height: 100%;
 }
-/* main{
-  overflow: hidden;
-} */
 /* SECTION01 */
 .sect01 {
   position: relative;
@@ -153,52 +186,58 @@ header .hamburger,
 /*SECTION02*/
 main .sect02 {
   position: relative;
-  margin-bottom: 160px;
+  margin: 200px auto 160px auto;
 }
-main .sect02 p {
-  font-family: "SCoreDream";
-  font-weight: 200;
+main .sect02 .sect02_title {
+  position: absolute;
+  top: -180px;
+  transform: translateX(-100%);
+  transition: all 0.5s;
 }
-main .sect02 .about_body {
-  display: block;
-  margin: 100px auto 35px auto;
-  /* margin: 130px 0 85px 0; */
-  line-height: 170%;
-  width: 1050px;
-  font-size: 30px;
+main .sect02 .sect02_title.active {
+  transform: translateX(0%);
 }
 
 main .sect02 .sub_line {
   width: 900px;
-  height: 10px;
+  height: 20px;
   position: relative;
-  top: -27px;
-  left: -570px;
-  background-color: #f1ede2;
-  border-radius: 0 5px 5px 0;
+  top: -50px;
+  left: -540px;
+  background-color: #dfc7bb;
+  border-radius: 0 10px 10px 0;
   z-index: -10;
-  animation: width 3s forwards;
 }
-@keyframes width {
-  from {
-    left: -1120px;
-  }
-  to {
-    left: -570px;
-  }
+main .sect02 .introduce ul {
+  height: 160px;
+  font-weight: 200;
+  font-size: 26px;
+  font-family: "SCoreDream";
+  position: relative;
 }
-
-@keyframes disappear {
-  from {
-    left: -570px;
-  }
-  to {
-    left: -1120px;
-  }
+main .sect02 .introduce div div {
+  position: relative;
+  top: -165px;
+  left: -10px;
+  transform: rotate(3deg);
+  z-index: -10;
+  width: 0px;
+  height: 37px;
+  background-color: #a75a50;
+  transition: all 0.5s;
 }
-
+main .sect02 .introduce div div.active {
+  width: 120px;
+}
+main .sect02 .introduce ul li:first-child {
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #f1ede2;
+}
 main .sect02 .skill_icon {
   padding-right: 64px;
+  position: relative;
+  bottom: 80px;
 }
 main .sect02 .skill_icon ul {
   width: 890px;
@@ -404,25 +443,26 @@ main .sect02 .sect02_hovercircle {
   border-radius: 50%;
   background-color: #f1ede2;
   font-size: 18px;
-  padding: 45px 0 0 33px;
+  padding: 55px 0 0 40px;
   position: relative;
   top: -190px;
   left: 180px;
   z-index: -10;
 }
 main .bg_rectangle01 {
-  width: 300%;
-  height: 600px;
+  width: 100vw;
+  height: 400px;
   position: absolute;
-  top: 44%;
-  left: -50%;
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #dfc7bb;
   z-index: -20;
 }
 main .bg_logo01 {
   position: absolute;
-  top: -95px;
-  right: -46%;
+  top: 410px;
+  right: -27%;
   z-index: -10;
 }
 main .bg_logo02 {
@@ -433,26 +473,66 @@ main .bg_logo02 {
 }
 /* SECTION03 */
 main .sect03 {
-  margin: 60px 0 75px 0;
   position: relative;
+  margin: 95px auto 300px auto;
 }
-main .sect03 .inner {
-  margin-bottom: 15px;
+main .sect03 .sect02_tit {
+  margin-bottom: 50px;
 }
 main .sect03 ul {
   font-size: 20px;
   width: 800px;
-  padding-top: 40px;
+  padding-top: 50px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  flex-wrap: wrap;
+}
+main .sect03_thumbnailbox {
+  transform: translateY(8%);
+  transition: all 0.6s;
+  opacity: 0;
+}
+main .sect03_thumbnailbox.active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .sect03 .thumbnailbox01 div div,
+.thumbnailbox02 div,
+.thumbnailbox03 div,
+.thumbnailbox01 .hobak,
+.thumbnailbox01 .isometric {
+  border: 15px solid #f1ede2;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .sect03 .thumbnailbox01 .flex {
+  width: 710px;
+}
+main .sect03 .thumbnailbox03 {
+  margin-top: 30px;
+}
+main .sect03_thumbnailbox img {
+  transition: all 0.3s;
+}
+main .sect03_thumbnailbox img:hover {
+  scale: 1.2;
+}
+main .sect03 .thumbnailbox01,
+.thumbnailbox02 {
+  height: 1330px;
+
+  flex-direction: column;
+  justify-content: space-between;
 }
 main .sect03 .bg_rectangle02 {
-  width: 100%;
-  height: 1060px;
+  width: 100vw;
+  height: 2060px;
   background-color: #dfc7bb;
   position: absolute;
-  top: 500px;
-  left: 0;
+  top: 1000px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -20;
 }
 main .sect03 .bg_circle06 {
@@ -617,21 +697,171 @@ main .sect03 .popup_box06 {
   box-shadow: 0 0 25px #25252557;
   display: none;
 }
+main .sect03 .sect03_thumbnailbox04 {
+  display: none;
+}
 /* SECTION04 */
 main .sect04 {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 450px;
 }
 main .sect04 .inner {
   margin-bottom: 15px;
 }
 main .sect04 ul {
   font-size: 25px;
-  width: 400px;
-  padding-bottom: 30px;
+  width: 300px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  align-items: flex-end;
 }
+main .sect04 ul li {
+  cursor: pointer;
+}
+main .sect04 ul li:hover {
+  font-weight: 300;
+  color: #a75a50;
+}
+main .sect04 ul li.active {
+  backdrop-filter: drop-shadow(0 0 10px #f1ede2);
+  font-weight: 400;
+  color: #a75a50;
+}
+main .scroll_window {
+  position: relative;
+  transition: all 0.5s;
+  display: none;
+}
+main .scroll_window.show {
+  display: block;
+}
+main .scroll_window02 {
+  position: relative;
+  display: none;
+}
+main .scroll_window02.show {
+  display: block;
+}
+
+main .sect04 .scroll_box {
+  width: inherit;
+  height: 670px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 15px solid #f1ede2;
+}
+
+main .sect04 .scroll_window a {
+  display: block;
+  width: inherit;
+  height: 100%;
+  cursor: pointer;
+}
+main .sect04 .scroll_roll {
+  width: inherit;
+  height: fit-content;
+  position: relative;
+  filter: brightness(1);
+  animation: BMA_scroll 10s infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+main .sect04 .scroll_roll img {
+  width: inherit;
+  /* border-radius: 15px; */
+}
+@keyframes BMA_scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-80%);
+  }
+}
+
+main .sect04 .scroll_window a:hover .scroll_roll {
+  filter: brightness(0.7);
+  animation-play-state: paused;
+}
+
+main .sect04 .scroll_window p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1ede2;
+  font-family: "SCoreDream";
+  font-size: 1.5em;
+  font-weight: 200;
+  display: none;
+}
+
+main .sect04 .scroll_window:hover p {
+  display: block;
+}
+
+/* .scroll_window02 */
+
+main .sect04 .scroll_window02 .scroll_box {
+  width: inherit;
+  height: 670px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 15px solid #f1ede2;
+}
+
+main .sect04 .scroll_window02 a {
+  display: block;
+  width: inherit;
+  height: 100%;
+  cursor: pointer;
+}
+main .sect04 .scroll_window02 .scroll_roll {
+  width: inherit;
+  height: fit-content;
+  position: relative;
+  filter: brightness(1);
+  animation: pf_scroll 9s infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+@keyframes pf_scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-87%);
+  }
+}
+main .sect04 .scroll_window02 .scroll_roll img {
+  width: inherit;
+  /* border-radius: 15px; */
+}
+
+main .sect04 .scroll_window02 a:hover .scroll_roll {
+  filter: brightness(0.7);
+  animation-play-state: paused;
+}
+main .sect04 .scroll_window02 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1ede2;
+  font-family: "SCoreDream";
+  font-size: 1.5em;
+  font-weight: 200;
+  display: none;
+}
+
+main .sect04 .scroll_window02:hover p {
+  display: block;
+}
+
 main .sect04 .bg_circle03 {
   width: 620px;
   height: 620px;
@@ -694,134 +924,74 @@ main .sect05 {
   font-family: "Poppins", sans-serif;
 }
 main .sect05 h2 {
-  margin-bottom: 50px;
+  margin-bottom: 90px;
+}
+main .sect05 .sect05_body {
+  transition: all 0.6s;
+  opacity: 0;
+}
+main .sect05 .sect05_body.active {
+  opacity: 1;
 }
 main .sect05 .contact_text {
   font-family: "SCoreDream";
   font-weight: 200;
-  font-size: 25px;
-  width: 370px;
-  margin-bottom: 100px;
+  font-size: 33px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+main .sect05 .contact_text p:nth-child(2) {
+  font-size: 90px;
+
+  font-family: "Poppins", sans-serif;
+  margin-top: 70px;
+  font-weight: 200;
+}
+main .sect05 .contact_text p:nth-child(2)::after {
+  content: "";
+  position: relative;
+  height: 2px;
+  background: #a75a50;
+  display: block;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.5s;
+  top: 90%;
+  animation: underline 2s infinite;
+}
+@keyframes underline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 main .sect05 .contact_list {
   height: 200px;
-  width: 370px;
-  display: flex;
-  flex-direction: column;
+  width: 860px;
   justify-content: space-between;
+  margin: 0 auto;
+}
+/* main .sect05 .contact_list li {
+  transition: all 0.3s;
+} */
+main .sect05 .contact_list li img:nth-child(2) {
+  display: none;
+}
+main .sect05 .contact_list li:hover img:nth-child(1) {
+  display: none;
+}
+main .sect05 .contact_list li:hover img:nth-child(2) {
+  display: block;
+  transform: translateY(-10px);
 }
 main .sect05 li {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 23px;
 }
-main .sect05 li p {
-  width: 290px;
-}
-main .sect05 .window_colorbnt {
-  width: 70px;
-}
-main .sect05 .window_colorbnt div {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-}
-main .sect05 .window_colorbnt div:nth-child(1) {
-  background-color: #e3605a;
-}
-main .sect05 .window_colorbnt div:nth-child(2) {
-  background-color: #f6e27c;
-}
-main .sect05 .window_colorbnt div:nth-child(3) {
-  background-color: #7fd169;
-}
-main .sect05 .window_top {
-  background-color: #f1ede2;
-  width: 761px;
-  height: 53.86px;
-  padding: 0 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-main .sect05 .window_arr {
-  width: 66px;
-}
-main .sect05 .window_arr div {
-  width: 32px;
-  height: 26px;
-  background-color: #fdfdfd;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-main .sect05 .window_arr .arr-l {
-  border-radius: 16px 0 0 16px;
-}
-main .sect05 .window_arr .arr-r {
-  border-radius: 0 16px 16px 0;
-}
-main .sect05 .window_address {
-  width: 421px;
-  height: 30px;
-  border-radius: 15px;
-  font-size: 15px;
-  font-weight: 300;
-  color: #3b3b3d;
-  background-color: #fdfdfd;
-  padding: 0 20px;
-}
-main .sect05 .name_box {
-  padding-bottom: 25px;
-}
-main .sect05 input {
-  border: 0;
-  border-radius: 6px;
-  width: 550px;
-  height: 32px;
-  background-color: #f1ede2;
-  outline: none;
-  padding: 1px 20px;
-  /* font-size: 15px; */
-}
-#mail_body {
-  height: 286px;
-  width: 100%;
-  background-color: #f1ede2;
-  border: 0;
-  border-radius: 11px;
-  resize: none;
-  margin: 40px 0;
-  outline: none;
-  padding: 20px;
-}
-main .sect05 .mail_window {
-  width: 761px;
-  height: 618px;
-  background-color: #fdfdfd;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 3px 3px 10px #26262648;
-  padding: 90px 47px 0 47px;
-  font-size: 22px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  color: #3b3b3d;
-}
-main .sect05 button {
-  width: 138px;
-  height: 34px;
-  border: 0;
-  border-radius: 6px;
-  background-color: #dfc7bb;
-  font-size: 18px;
-  color: #f5f5f5;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
+
 .bg_circle05_box {
   overflow: hidden;
   position: absolute;
@@ -965,7 +1135,7 @@ footer .top {
     padding: 0;
     flex-wrap: wrap;
   }
-  main .sect03 .bg_rectangle02 {
+  /* main .sect03 .bg_rectangle02 {
     width: 100%;
     height: 1060px;
     background-color: #dfc7bb;
@@ -973,153 +1143,7 @@ footer .top {
     top: 500px;
     left: 0;
     z-index: -20;
-  }
-  /* SECTION05 */
-
-  main .sect05 {
-    margin-bottom: 180px;
-    position: relative;
-    font-family: "Poppins", sans-serif;
-  }
-  main .sect05 h2 {
-    margin-bottom: 25px;
-  }
-  main .sect05 .contact_text {
-    font-family: "SCoreDream";
-    font-weight: 200;
-    font-size: 25px;
-    width: 330px;
-    margin-bottom: 100px;
-  }
-  main .sect05 .contact_list {
-    height: 200px;
-    width: 335px;
-    margin-top: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  main .sect05 li {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 23px;
-  }
-  main .sect05 li p {
-    width: 290px;
-  }
-  main .sect05 .window_colorbnt {
-    width: 70px;
-  }
-  main .sect05 .window_colorbnt div {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-  }
-  main .sect05 .window_top {
-    background-color: #f1ede2;
-    width: 620px;
-    height: 53.86px;
-    padding: 0 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  main .sect05 .window_arr {
-    width: 66px;
-  }
-  main .sect05 .window_arr div {
-    width: 32px;
-    height: 26px;
-    background-color: #fdfdfd;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  main .sect05 .window_arr .arr-l {
-    border-radius: 16px 0 0 16px;
-  }
-  main .sect05 .window_arr .arr-r {
-    border-radius: 0 16px 16px 0;
-  }
-  main .sect05 .window_address {
-    width: 330px;
-    height: 30px;
-    border-radius: 15px;
-    font-size: 15px;
-    font-weight: 300;
-    color: #3b3b3d;
-    background-color: #fdfdfd;
-    padding: 0 20px;
-  }
-  main .sect05 .name_box {
-    padding-bottom: 25px;
-  }
-  main .sect05 input {
-    border: 0;
-    border-radius: 6px;
-    width: 440px;
-    height: 32px;
-    background-color: #f1ede2;
-    outline: none;
-    padding: 1px 20px;
-    /* font-size: 15px; */
-  }
-  #mail_body {
-    height: 286px;
-    width: 100%;
-    background-color: #f1ede2;
-    border: 0;
-    border-radius: 11px;
-    resize: none;
-    margin: 40px 0;
-    outline: none;
-    padding: 20px;
-  }
-  main .sect05 .mail_window {
-    width: 620px;
-    height: 618px;
-    background-color: #fdfdfd;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 3px 3px 10px #26262648;
-    padding: 90px 47px 0 47px;
-    font-size: 22px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    color: #3b3b3d;
-  }
-  main .sect05 button {
-    width: 138px;
-    height: 34px;
-    border: 0;
-    border-radius: 6px;
-    background-color: #dfc7bb;
-    font-size: 18px;
-    color: #f5f5f5;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-  .bg_circle05_box {
-    overflow: hidden;
-    position: absolute;
-    bottom: -183px;
-    left: -452px;
-    width: 500px;
-    height: 500px;
-  }
-  .bg_circle05 {
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    background-color: #a75a50;
-    position: absolute;
-    top: 0px;
-    left: -305px;
-    z-index: -10;
-  }
+  } */
 }
 
 /* RESPONSIVE (750px) */
@@ -1309,7 +1333,24 @@ footer .top {
   }
   header .hamburger {
     display: block;
+    scale: 0.9;
   }
+  header .nav_cross {
+    scale: 0.9;
+  }
+
+  /* active */
+
+  header .hamburger.active {
+    display: none;
+  }
+  header .nav_cross.active {
+    display: block;
+  }
+  .side_nav.active {
+    display: block;
+  }
+
   .sect01 {
     margin-bottom: -260px;
     padding: 250px 0;
@@ -1352,32 +1393,17 @@ footer .top {
 
   /*SECTION02*/
 
+  #about {
+    height: 0px;
+  }
   main .sect02 .sub_line {
     height: 5px;
-    top: -11px;
-    left: 70px;
+    top: -25px;
+    left: -631px;
     border-radius: 2.5px;
-  }
-  main .sect02 .about_body {
-    margin: 80px 0 85px 0;
-    line-height: 180%;
-    font-size: 16px;
-    width: 100%;
-  }
-  main .sect02 .skill_icon ul {
-    width: 490px;
   }
   main .sect02 .skill_icon ul li img {
     width: 60%;
-  }
-  main .sect02 .bg_rectangle01 {
-    height: 780px;
-    top: 65%;
-  }
-  main .sect02 .selpic {
-    position: relative;
-    top: -40px;
-    left: -510px;
   }
   main .sect02 .selpic img {
     width: 150px;
@@ -1402,5 +1428,461 @@ footer .top {
   }
   main .bg_logo02 img {
     width: 180px;
+  }
+  main .sect02 {
+    position: relative;
+    margin: 200px auto 160px auto;
+  }
+  main .sect02 .sect02_title {
+    position: absolute;
+    top: -130px;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    width: 328px;
+    margin: 0 auto;
+  }
+  main .sect02 .sect02_title.active {
+    transform: translateX(0%);
+  }
+  main .sect02 .sect02_title h2 {
+    width: 100%;
+  }
+  main .introduce {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 328px;
+    padding-left: 10px;
+  }
+  main .sect02 .introduce ul {
+    height: 95px;
+    font-weight: 200;
+    font-size: 14px;
+    font-family: "SCoreDream";
+    position: relative;
+  }
+  main .sect02 .introduce div div {
+    position: relative;
+    top: -100px;
+    left: -10px;
+    transform: rotate(3deg);
+    z-index: -10;
+    width: 0px;
+    height: 25px;
+    background-color: #a75a50;
+    transition: all 0.5s;
+  }
+  main .sect02 .introduce div div.active {
+    width: 73px;
+  }
+  main .sect02 .introduce ul li:first-child {
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #f1ede2;
+  }
+  main .sect02 .skill_icon {
+    padding-right: 64px;
+    position: relative;
+    bottom: 0;
+  }
+  main .sect02 .skill_icon ul {
+    width: 400px;
+    animation: sect02 5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    transform: translateX(0%);
+  }
+  @keyframes sect02 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-45%);
+    }
+  }
+  main .sect02 .skill_icon ul:hover {
+    animation-play-state: paused;
+  }
+  main .sect02 .skill_icon ul li div {
+    position: relative;
+  }
+  main .sect02 .skill_icon ul li img {
+    filter: grayscale(100%);
+  }
+  main .sect02 .skill_icon ul li div img {
+    position: absolute;
+    filter: drop-shadow(3px 3px 10px #25252557);
+    visibility: hidden;
+    width: 110%;
+  }
+  main .sect02 .selpic {
+    position: absolute;
+    scale: 0.9;
+    right: 0;
+    transform: translate(25%, -30%);
+  }
+  main .sect02 .selpic img:first-child {
+    transform: scaleX(-1);
+  }
+  /* HOVER */
+  main .sect02 .skill_icon ul li:hover > img {
+    filter: grayscale(0);
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ai img:nth-child(1) {
+    top: -30px;
+    left: -10px;
+    transform: rotate(10deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ai img:nth-child(2) {
+    top: -55px;
+    left: -12px;
+    transform: rotate(-3deg);
+    animation: hover 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ai img:nth-child(3) {
+    top: -76px;
+    left: 15px;
+    transform: rotate(3deg);
+    animation: hover 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ai img:nth-child(4) {
+    top: -103px;
+    left: -17px;
+    transform: rotate(-16deg);
+    animation: hover 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ai img:nth-child(5) {
+    top: -135px;
+    left: 19px;
+    transform: rotate(4deg);
+    animation: hover 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ps img:nth-child(1) {
+    top: -25px;
+    left: -2px;
+    transform: rotate(11deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ps img:nth-child(2) {
+    top: -53px;
+    left: -19px;
+    transform: rotate(-5deg);
+    animation: hover 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ps img:nth-child(3) {
+    top: -77px;
+    left: 20px;
+    transform: rotate(-5deg);
+    animation: hover 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ps img:nth-child(4) {
+    top: -94px;
+    left: -19px;
+    transform: rotate(-5deg);
+    animation: hover 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_pr img:nth-child(1) {
+    top: -32px;
+    left: -13px;
+    transform: rotate(9deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ae img:nth-child(1) {
+    top: -29px;
+    left: -34px;
+    transform: rotate(-5deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ae img:nth-child(2) {
+    top: -50px;
+    left: -9px;
+    transform: rotate(5deg);
+    animation: hover 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_ae img:nth-child(3) {
+    top: -73px;
+    left: -33px;
+    transform: rotate(-6deg);
+    animation: hover 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_html img:nth-child(1) {
+    top: -39px;
+    left: -10px;
+    transform: rotate(7deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_css img:nth-child(1) {
+    top: -25px;
+    left: -11px;
+    transform: rotate(10deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_css img:nth-child(2) {
+    top: -57px;
+    left: -23px;
+    transform: rotate(-5deg);
+    animation: hover 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_figma img:nth-child(1) {
+    top: -25px;
+    left: -25px;
+    transform: rotate(-10deg);
+    animation: hover 1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_figma img:nth-child(2) {
+    top: -43px;
+    left: -15px;
+    transform: rotate(2deg);
+    animation: hover 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_figma img:nth-child(3) {
+    top: -67px;
+    left: -22px;
+    animation: hover 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  main .sect02 .skill_icon ul li:hover .bubble_figma img:nth-child(4) {
+    top: -86px;
+    left: -48px;
+    transform: rotate(-16deg);
+    animation: hover 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  /* ANIMATION */
+  @keyframes hover {
+    0% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  main .sect02 .selpic img:nth-child(2) {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 105%;
+  }
+  main .sect02 .selpic:hover img:nth-child(1) {
+    visibility: visible;
+  }
+  main .sect02 .selpic:hover img:nth-child(2) {
+    display: none;
+  }
+  main .bg_rectangle01 {
+    width: 100vw;
+    height: 450px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #dfc7bb;
+    z-index: -20;
+  }
+  main .bg_logo02 {
+    position: absolute;
+    top: 750px;
+    left: -46%;
+    z-index: -10;
+  }
+  main .bg_logo01 {
+    position: absolute;
+    top: -147px;
+    right: -20%;
+    z-index: -10;
+  }
+
+  /*-------SECTION03-------  */
+  main .sect03 {
+    position: relative;
+    margin: 95px auto 120px auto;
+  }
+  main .sect03 .sect02_tit {
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  main .sect03 ul {
+    margin-top: 10px;
+    font-size: 10pt;
+    width: 300px;
+  }
+  main .sect03 .sect03_thumbnailbox {
+    display: none;
+  }
+  main .sect03 .sect03_thumbnailbox04 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .sect03 .sect03_thumbnailbox04 div {
+    width: calc((100% - 10px) / 2);
+    margin: 5px 0;
+    border: 5px solid #f1ede2;
+    border-radius: 5px;
+  }
+  main .sect03,
+  .sect03_thumbnailbox04 div img {
+    width: 100%;
+  }
+  main .sect03 .bg_rectangle02 {
+    width: 100vw;
+    height: 1300px;
+    background-color: #dfc7bb;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -20;
+  }
+
+  /* ------------SECTION04------------ */
+  main .sect04 {
+    margin-bottom: 160px;
+  }
+  main .sect04 .sect04_tit {
+    flex-direction: column;
+  }
+  main .sect04 ul {
+    font-size: 17px;
+  }
+  main .sect04 .scroll_window .scroll_box {
+    width: inherit;
+    height: 65vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 5px solid #f1ede2;
+  }
+  main .sect04 .scroll_window02 .scroll_box {
+    width: inherit;
+    height: 65vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 5px solid #f1ede2;
+  }
+  main .sect04 .scroll_roll {
+    filter: brightness(1);
+    animation: BMA_scroll 8s infinite;
+  }
+
+  main .sect04 .scroll_window02 .scroll_roll {
+    filter: brightness(1);
+    animation: pf_scroll 9s infinite;
+  }
+
+  @keyframes BMA_scroll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-38%);
+    }
+  }
+  @keyframes pf_scroll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-60.5%);
+    }
+  }
+
+  /* ---------SECTION05--------- */
+  #contact {
+    height: 100px;
+  }
+  main .sect05 {
+    margin-bottom: 150px;
+  }
+  main .sect05 .bg_circle04 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #6e7d75;
+    position: absolute;
+    top: -37%;
+    right: 50%;
+    transform: translateX(102%);
+    z-index: -10;
+  }
+  main .sect05 .contact_text {
+    font-size: 18px;
+  }
+  main .sect05 .contact_text p:nth-child(2) {
+    font-size: 27px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 70px;
+    font-weight: 300;
+  }
+  main .sect05 .contact_list {
+    width: inherit;
+    height: 75px;
+  }
+  main .sect05 .contact_list img {
+    scale: 0.6;
+  }
+  .bg_circle05 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #a75a50;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+  }
+  .bg_circle05_box {
+    overflow: hidden;
+    position: absolute;
+    bottom: -31%;
+    left: -103%;
+    width: 500px;
+    height: 175px;
+  }
+
+  /* -------FOOTER------- */
+  footer {
+    height: 30px;
+    font-size: 10px;
+    font-weight: 200;
+  }
+  footer .top {
+    width: 36px;
+  }
+  footer img {
+    scale: 0.7;
   }
 }
