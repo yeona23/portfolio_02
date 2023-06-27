@@ -1314,6 +1314,9 @@ footer .top {
 }
 /* 360px */
 @media screen and (max-width: 689px) {
+  #wrpa {
+    font-family: "Poppins", sans-serif;
+  }
   .inner {
     width: 328px;
     margin: 0 auto;
@@ -1321,6 +1324,7 @@ footer .top {
   h2 {
     font-size: 60px;
     text-align: center;
+    font-family: "Poppins", sans-serif;
   }
   header {
     height: 40px;
@@ -1735,7 +1739,7 @@ footer .top {
     margin-bottom: 25px;
   }
   main .sect03 ul {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 10pt;
     width: 300px;
   }
@@ -1776,6 +1780,7 @@ footer .top {
   }
   main .sect04 ul {
     font-size: 17px;
+    margin-top: 20px;
   }
   main .sect04 .scroll_window .scroll_box {
     width: inherit;
