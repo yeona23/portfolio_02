@@ -6,10 +6,10 @@
   overflow: unset;
 }
 .swiper-slide {
-  filter: blur(2.5px) grayscale(80%);
+  filter: grayscale(80%);
 }
 .swiper-slide.swiper-slide-active {
-  box-shadow: 0px 0px 25px #2222224c;
+  box-shadow: none;
   filter: blur(0px);
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -42,7 +42,7 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   height: var(--swiper-scrollbar-size, 10px);
   width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
 }
-.sect03 .popup_box02 .swiper-wrapper {
+.sect03 .wide .popup_box02 .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -56,7 +56,7 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   box-sizing: content-box;
 }
 
-.sect03 .popup_box .swiper-wrapper {
+.sect03 .wide .popup_box .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -70,7 +70,7 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   box-sizing: content-box;
 }
 
-.sect03 .popup_box04 .swiper-wrapper {
+.sect03 .wide .popup_box04 .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -84,7 +84,7 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   box-sizing: content-box;
 }
 
-.sect03 .popup_box05 .swiper-wrapper {
+.sect03 .wide .popup_box05 .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -98,7 +98,7 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   box-sizing: content-box;
 }
 
-.sect03 .popup_box06 .swiper-wrapper {
+.sect03 .wide .popup_box06 .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -112,7 +112,35 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   box-sizing: content-box;
 }
 
-main .sect04 .swiper-scrollbar {
+.sect03 .wide .popup_box07 .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
+}
+
+.sect03 .wide .popup_box08 .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
+}
+
+/* main .sect04 .swiper-scrollbar {
   border-radius: var(--swiper-scrollbar-border-radius, 10px) !important;
   position: relative;
   -ms-touch-action: none;
@@ -122,7 +150,7 @@ main .sect04 .swiper-scrollbar {
 main .sect04 .swiper-scrollbar-drag {
   height: 100%;
   /* width: calc(100% / 6) !important; */
-  position: relative;
+/* position: relative;
   background: var(--swiper-scrollbar-drag-bg-color, #a18071);
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
   left: 0;
@@ -131,7 +159,7 @@ main .sect04 .swiper-scrollbar-drag {
 main .sect04 .swiper-slide.swiper-slide-active {
   transform: scale(1) !important;
   z-index: 1000000;
-}
+}  */
 /* .swiper {
   height: 650px;
   width: 100%;

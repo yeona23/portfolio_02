@@ -25,14 +25,27 @@ $(window).scroll(function () {
   } else {
     $(".sect03_thumbnailbox").removeClass("active");
   }
+
+  if (Cscroll >= $(".sect03").offset().top - 350) {
+    $(".main_nav li:nth-child(2)")
+      .addClass("show")
+      .siblings()
+      .removeClass("show");
+    $(".sect03_thumbnailbox04").addClass("active");
+  } else {
+    $(".sect03_thumbnailbox04").removeClass("active");
+  }
+
   if (Cscroll >= $(".sect04").offset().top - 350) {
     $(".main_nav li:nth-child(3)")
       .addClass("show")
       .siblings()
       .removeClass("show");
-    $("main .scroll_window").addClass("active");
+    $("main .scroll_window").addClass("reveal");
+    $("main .scroll_window02").addClass("reveal");
   } else {
-    $("main .scroll_window").removeClass("active");
+    $("main .scroll_window").removeClass("reveal");
+    $("main .scroll_window02").removeClass("reveal");
   }
 
   if (Cscroll >= $(".sect05").offset().top - 200) {
@@ -112,6 +125,12 @@ $(".shadow").mouseup(function (e) {
   if ($(".popup_box06").has(e.target).length === 0) {
     $(".popup_box06").fadeOut();
   }
+  if ($(".popup_box07").has(e.target).length === 0) {
+    $(".popup_box07").fadeOut();
+  }
+  if ($(".popup_box08").has(e.target).length === 0) {
+    $(".popup_box08").fadeOut();
+  }
 });
 
 $(".btn_close").click(function () {
@@ -121,6 +140,8 @@ $(".btn_close").click(function () {
   $(".popup_box04").fadeOut();
   $(".popup_box05").fadeOut();
   $(".popup_box06").fadeOut();
+  $(".popup_box07").fadeOut();
+  $(".popup_box08").fadeOut();
 
   $(".shadow").hide();
   $("body").removeClass("notScroll");
@@ -164,6 +185,18 @@ $(".sect03_thumbnailbox .dior").click(function () {
 
 $(".sect03_thumbnailbox .leaflet").click(function () {
   $(".wide .popup_box06").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox .isometric").click(function () {
+  $(".wide .popup_box07").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox .homigot").click(function () {
+  $(".wide .popup_box08").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
@@ -212,6 +245,19 @@ $(".sect03_thumbnailbox04 .leaflet").click(function () {
   $("body").addClass("notScroll");
 });
 
+$(".sect03_thumbnailbox04 .isometric").click(function () {
+  $(".mobile_pop .popup_box07").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .homigot").click(function () {
+  $(".mobile_pop .popup_box08").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+// btn
 $(".hamburger").click(function () {
   $(this).addClass("active");
   $(".nav_cross").addClass("active");
