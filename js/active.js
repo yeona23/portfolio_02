@@ -126,44 +126,88 @@ $(".btn_close").click(function () {
   $("body").removeClass("notScroll");
 });
 
-$(".logo").click(function () {
-  $(".popup_box02").fadeIn();
+$(".sect03_thumbnailbox .logo").click(function () {
+  $(".wide .popup_box02").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
 
-$(".hobak").click(function () {
-  $(".popup_box").fadeIn();
+$(".sect03_thumbnailbox .hobak").click(function () {
+  $(".wide .popup_box").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
 
-$(".onthestreet").click(function () {
-  $(".popupVideo").fadeIn();
+$(".sect03_thumbnailbox .onthestreet").click(function () {
+  $(".wide .popupVideo").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
 
-$(".productpage").click(function () {
-  $(".popup_box03").fadeIn();
+$(".sect03_thumbnailbox .productpage").click(function () {
+  $(".wide .popup_box03").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
 
-$(".sakari").click(function () {
-  $(".popup_box04").fadeIn();
+$(".sect03_thumbnailbox .sakari").click(function () {
+  $(".wide .popup_box04").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
 
-$(".dior").click(function () {
-  $(".popup_box05").fadeIn();
+$(".sect03_thumbnailbox .dior").click(function () {
+  $(".wide .popup_box05").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
 
-$(".leaflet").click(function () {
-  $(".popup_box06").fadeIn();
+$(".sect03_thumbnailbox .leaflet").click(function () {
+  $(".wide .popup_box06").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+// MOBILE
+
+$(".sect03_thumbnailbox04 .logo").click(function () {
+  $(".mobile_pop .popup_box02").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .hobak").click(function () {
+  $(".mobile_pop .popup_box").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .onthestreet").click(function () {
+  $(".mobile_pop .popupVideo").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .productpage").click(function () {
+  $(".mobile_pop .popup_box03").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .sakari").click(function () {
+  $(".mobile_pop .popup_box04").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .dior").click(function () {
+  $(".mobile_pop .popup_box05").fadeIn();
+  $(".shadow").show();
+  $("body").addClass("notScroll");
+});
+
+$(".sect03_thumbnailbox04 .leaflet").click(function () {
+  $(".mobile_pop .popup_box06").fadeIn();
   $(".shadow").show();
   $("body").addClass("notScroll");
 });
@@ -232,3 +276,28 @@ function closePopup(flag) {
   //스크롤 막기 해제
   $(".popup_box").off("scroll touchmove mousewheel");
 }
+
+$(window)
+  .resize(function () {
+    if (window.innerWidth < 680) {
+      // 다바이스 크기가 720이상일때
+      /* 스크립트내용*/
+      $(window).scroll(function () {
+        let Cscroll = $(this).scrollTop();
+        $(".scroll").text(Cscroll);
+
+        if (Cscroll >= $(".sect05").offset().top - 300) {
+          $(".main_nav li:nth-child(4)")
+            .addClass("show")
+            .siblings()
+            .removeClass("show");
+          $(".sect05_body").addClass("active");
+        } else {
+          $(".sect05_body").removeClass("active");
+        }
+      });
+    } else {
+      /* 스크립트내용*/
+    }
+  })
+  .resize();

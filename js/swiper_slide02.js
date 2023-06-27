@@ -32,35 +32,72 @@ const swiper_sect04 = new Swiper(".sect04_slide", {
   roundLengths: true,
 });
 
-const swiper_popup01 = new Swiper(".popup01", {
+const swiper_popup01 = new Swiper(".wide .popup01", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   keyboard: true,
 });
-const swiper_popup02 = new Swiper(".popup02", {
+const swiper_popup02 = new Swiper(".wide .popup02", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   keyboard: true,
 });
-const swiper_popup04 = new Swiper(".popup04", {
+const swiper_popup04 = new Swiper(".wide .popup04", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   keyboard: true,
 });
-const swiper_popup05 = new Swiper(".popup05", {
+const swiper_popup05 = new Swiper(".wide .popup05", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   keyboard: true,
 });
-const swiper_popup06 = new Swiper(".popup06", {
+const swiper_popup06 = new Swiper(".wide .popup06", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+
+// MOBILE
+const swiper_mpopup01 = new Swiper(".mobile_pop .popup01", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+const swiper_mpopup02 = new Swiper(".mobile_pop .popup02", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+const swiper_mpopup04 = new Swiper(".mobile_pop .popup04", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+const swiper_mpopup05 = new Swiper(".mobile_pop .popup05", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+});
+const swiper_mpopup06 = new Swiper(".mobile_pop .popup06", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -76,7 +113,6 @@ const swiper_popup06 = new Swiper(".popup06", {
 
 //     return;
 //   }
-
 
 //   //sending method process
 
