@@ -566,6 +566,9 @@ main .sect03 .bg_rectangle02 {
 main .sect03 .bg_circle06 {
   display: none;
 }
+
+/* popup(wide) */
+
 .wide .popupVideo {
   justify-content: center;
   align-items: center;
@@ -592,7 +595,7 @@ main .sect03 .bg_circle06 {
   height: inherit;
 }
 main .sect03 .wide .popup_box,
-.popup_box02 {
+main .sect03 .wide .popup_box02 {
   width: 90%;
   height: 90vh;
   text-align: center;
@@ -747,7 +750,7 @@ main .sect03 .sect03_thumbnailbox04 {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 40vh;
+  height: 30vh;
   text-align: center;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -755,8 +758,8 @@ main .sect03 .sect03_thumbnailbox04 {
   left: 50%;
   z-index: 1000000;
   overflow: hidden;
-  border-radius: 30px;
-  box-shadow: 0 0 25px #25252557;
+  border-radius: 0px;
+  box-shadow: none;
   display: none;
 }
 .mobile_pop .popupVideo div {
@@ -768,12 +771,12 @@ main .sect03 .sect03_thumbnailbox04 {
   height: inherit;
 }
 main .sect03 .mobile_pop .popup_box,
-.popup_box02,
-.popup_box04,
-.popup_box05,
-.popup_box06,
-.popup_box07,
-.popup_box08 {
+main .sect03 .mobile_pop .popup_box02,
+main .sect03 .mobile_pop .popup_box04,
+main .sect03 .mobile_pop .popup_box05,
+main .sect03 .mobile_pop .popup_box06,
+main .sect03 .mobile_pop .popup_box07,
+main .sect03 .mobile_pop .popup_box08 {
   width: 90%;
   height: 63vh;
   text-align: center;
@@ -1335,9 +1338,6 @@ footer .top {
     display: none;
   }
   header .nav_cross.active {
-    display: block;
-  }
-  .side_nav.active {
     display: block;
   }
 
@@ -2036,9 +2036,13 @@ footer .top {
     background-color: #6e7d75;
     position: absolute;
     top: -37%;
-    right: 50%;
-    transform: translateX(102%);
+    right: 0;
+    transform: translateX(120%);
     z-index: -10;
+    transition: all 0.5s;
+  }
+  main .sect05 .bg_circle04.show {
+    transform: translateX(63%);
   }
   main .sect05 .contact_text {
     font-size: 18px;
@@ -2070,9 +2074,14 @@ footer .top {
     overflow: hidden;
     position: absolute;
     bottom: -31%;
-    left: -103%;
+    left: 0%;
+    transform: translateX(-100%);
     width: 500px;
     height: 175px;
+    transition: all 0.5s;
+  }
+  .bg_circle05_box.show {
+    transform: translateX(-53%);
   }
 
   /* -------FOOTER------- */
