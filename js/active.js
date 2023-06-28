@@ -109,7 +109,7 @@ $(".shadow").mouseup(function (e) {
   if ($(".popup_box").has(e.target).length === 0) {
     $(".popup_box").fadeOut();
     $(".shadow").fadeOut();
-    $(".mobile_pop .popupVideo").remove();
+    $(".popupVideo").empty();
     $("body").removeClass("notScroll");
   }
   if ($(".popupVideo").has(e.target).length === 0) {
@@ -164,10 +164,33 @@ $(".sect03_thumbnailbox .hobak").click(function () {
   $("body").addClass("notScroll");
 });
 
-$(".sect03_thumbnailbox .onthestreet").click(function () {
-  $(".wide .popupVideo").fadeIn();
-  $(".shadow").show();
-  $("body").addClass("notScroll");
+$(function () {
+  var YT = $("iframe"); //동영상 코드
+
+  $(".sect03_thumbnailbox .onthestreet").on("click", function () {
+    //레이어 열때
+    let tpl = `
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/WFtP5rCwwHY"
+        title="YouTube video player"
+        frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <div>
+`;
+    $(".wide .popupVideo").append(tpl);
+    $(".wide .popupVideo").show();
+    $(".shadow").show();
+    $("body").addClass("notScroll");
+  });
+
+  $(".shadow").on("click", function () {
+    $("popupVideo").hide();
+  });
 });
 
 $(".sect03_thumbnailbox .productpage").click(function () {
@@ -220,10 +243,39 @@ $(".sect03_thumbnailbox04 .hobak").click(function () {
   $("body").addClass("notScroll");
 });
 
-$(".sect03_thumbnailbox04 .onthestreet").click(function () {
-  $(".mobile_pop .popupVideo").fadeIn();
-  $(".shadow").show();
-  $("body").addClass("notScroll");
+// $(".sect03_thumbnailbox04 .onthestreet").click(function () {
+//   $(".mobile_pop .popupVideo").fadeIn();
+//   $(".shadow").show();
+//   $("body").addClass("notScroll");
+// });
+
+$(function () {
+  var YT = $("iframe"); //동영상 코드
+
+  $(".sect03_thumbnailbox04 .onthestreet").on("click", function () {
+    //레이어 열때
+    let tpl = `
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/WFtP5rCwwHY"
+        title="YouTube video player"
+        frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <div>
+`;
+    $(".mobile_pop .popupVideo").append(tpl);
+    $(".mobile_pop .popupVideo").show();
+    $(".shadow").show();
+    $("body").addClass("notScroll");
+  });
+
+  $(".shadow").on("click", function () {
+    $("popupVideo").hide();
+  });
 });
 
 $(".sect03_thumbnailbox04 .productpage").click(function () {
