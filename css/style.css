@@ -2021,6 +2021,20 @@ footer .top {
       transform: translateY(-60.5%);
     }
   }
+  main .sect04 .scroll_window a:hover .scroll_roll {
+    filter: brightness(1);
+    animation-play-state: running;
+  }
+  main .sect04 .scroll_window:hover p {
+    display: none;
+  }
+  main .sect04 .scroll_window02 a:hover .scroll_roll {
+    filter: brightness(1);
+    animation-play-state: running;
+  }
+  main .sect04 .scroll_window02:hover p {
+    display: none;
+  }
 
   /* ---------SECTION05--------- */
   #contact {
