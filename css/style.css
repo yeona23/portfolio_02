@@ -2082,7 +2082,6 @@ footer .top {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: -1000;
   }
   .bg_circle05_box {
     overflow: hidden;
@@ -2093,6 +2092,7 @@ footer .top {
     width: 500px;
     height: 175px;
     transition: all 0.5s;
+    z-index: -1000;
   }
   .bg_circle05_box.show {
     transform: translateX(-53%);
