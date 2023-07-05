@@ -134,6 +134,36 @@ const swiper_mpopup08 = new Swiper(".mobile_pop .popup08", {
   },
   keyboard: true,
 });
+var sect04_swiper = new Swiper(".sect04_mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+  loop: true,
+  loopAdditionalSlides: 3,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+sect04_swiper.on("slideChange", function () {
+  console.log("test for slide change!!");
+  $(".sect04 ul li").removeClass("active");
+  if (
+    $(".swiper-pagination-bullet:first-child").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".sect04 ul li:first-child").addClass("active");
+  }
+  if (
+    $(".swiper-pagination-bullet:nth-child(2)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".sect04 ul li:nth-child(2)").addClass("active");
+  }
+});
+
 // var clickEvent = $('#ddkaBtn').on('click', function() {
 //   let anything = $('#name').val();
 //   // 'jdkjakdsg@akd.kr';

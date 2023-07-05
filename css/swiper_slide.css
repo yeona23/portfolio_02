@@ -139,6 +139,20 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   );
   box-sizing: content-box;
 }
+.sect04 .swiper {
+  width: inherit;
+  height: 500px;
+}
+.sect04 .swiper-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #190c0c;
+  border: 5px solid #f1ede2;
+}
 
 /* main .sect04 .swiper-scrollbar {
   border-radius: var(--swiper-scrollbar-border-radius, 10px) !important;
