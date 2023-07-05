@@ -140,7 +140,7 @@ main .sect03 .popup_box .swiper-horizontal > .swiper-pagination-bullets,
   box-sizing: content-box;
 }
 .sect04 .swiper {
-  width: inherit;
+  width: 90%;
   height: 500px;
 }
 .sect04 .swiper-slide {
