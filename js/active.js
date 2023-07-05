@@ -369,16 +369,6 @@ $(".sect04 ul li:nth-child(2)").click(function () {
   $(".sect04 .swiper-pagination-bullet:nth-child(2)").trigger("click");
 });
 
-$(".sect04 .swiper-pagination")(function () {
-  if (
-    $("sect04 .swiper-pagination-bullet:first-child").hasClass(
-      ".swiper-pagination-bullet-active"
-    )
-  ) {
-    ".sect04 ul li:first-child".addClass("active");
-  }
-});
-
 //스크롤 막기
 $(".popup_box").on("scroll touchmove mousewheel", function (event) {
   event.preventDefault();

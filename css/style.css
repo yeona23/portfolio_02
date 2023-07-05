@@ -666,20 +666,6 @@ main .sect03 .wide .popup03 {
   scrollbar-width: none; /* 파이어폭스 */
 }
 
-main .sect03 .wide .popup03 .arrow {
-  position: relative;
-  top: 180px;
-  width: 45px;
-  animation: arrow02 3s infinite alternate;
-}
-@keyframes arrow02 {
-  from {
-    transform: translateY(-30px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
 .popup_box03 .popup03::-webkit-scrollbar {
   display: none;
 }
@@ -835,7 +821,7 @@ main .sect03 .mobile_pop .popup03 {
 main .sect03 .mobile_pop .popup03 img {
   width: inherit;
 }
-main .sect03 .mobile_pop .popup03 .arrow {
+/* main .sect03 .mobile_pop .popup03 .arrow {
   position: absolute;
   top: 100px;
   width: 20px;
@@ -848,7 +834,7 @@ main .sect03 .mobile_pop .popup03 .arrow {
   to {
     transform: translateY(0px);
   }
-}
+} */
 
 .popup_box03 .popup03::-webkit-scrollbar {
   display: none;
@@ -2077,9 +2063,9 @@ footer .top {
   main .sect04 .sect04_roll02 {
     display: block;
   }
-  /* main .sect04 .sect04_roll02 .swiper-pagination {
+  main .sect04 .sect04_roll02 .swiper-pagination {
     visibility: hidden;
-  } */
+  }
 
   /* ---------SECTION05--------- */
   #contact {
