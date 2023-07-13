@@ -898,7 +898,7 @@ main .sect04 .inner {
 }
 main .sect04 ul {
   font-size: 25px;
-  width: 340px;
+  width: 700px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   align-items: flex-end;
@@ -925,9 +925,17 @@ main .scroll_window.show {
 }
 main .scroll_window02 {
   position: relative;
+  transition: all 0.5s;
   display: none;
 }
 main .scroll_window02.show {
+  display: block;
+}
+main .scroll_window03 {
+  position: relative;
+  display: none;
+}
+main .scroll_window03.show {
   display: block;
 }
 
@@ -1049,6 +1057,68 @@ main .sect04 .scroll_window02 p {
 main .sect04 .scroll_window02:hover p {
   display: block;
 }
+
+/* .scroll_window03 */
+
+main .sect04 .scroll_window03 .scroll_box {
+  width: inherit;
+  height: 670px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 15px solid #f1ede2;
+}
+
+main .sect04 .scroll_window03 a {
+  display: block;
+  width: inherit;
+  height: 100%;
+  cursor: pointer;
+}
+main .sect04 .scroll_window03 .scroll_roll {
+  width: inherit;
+  height: fit-content;
+  position: relative;
+  filter: brightness(1);
+  animation: pf_scroll 10s infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+@keyframes pf_scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-87%);
+  }
+}
+main .sect04 .scroll_window03 .scroll_roll img {
+  width: inherit;
+  /* border-radius: 15px; */
+}
+
+main .sect04 .scroll_window03 a:hover .scroll_roll {
+  filter: brightness(0.7);
+  animation-play-state: paused;
+}
+main .sect04 .scroll_window03 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1ede2;
+  font-family: "SCoreDream";
+  font-size: 1.5em;
+  font-weight: 200;
+  display: none;
+}
+
+main .sect04 .scroll_window03:hover p {
+  display: block;
+}
+
+/* MOBILE------------------- */
 
 main .sect04 .sect04_roll02 {
   display: none;
@@ -1982,10 +2052,11 @@ footer .top {
     flex-direction: column;
   }
   main .sect04 ul {
-    font-size: 17px;
+    font-size: 12px;
     margin-top: 20px;
     width: 90%;
     padding: 0 5px;
+    flex-wrap: wrap;
   }
   main .sect04 .sect04_roll {
     display: none;

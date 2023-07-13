@@ -104,6 +104,13 @@ window.addEventListener("scroll", function () {
 //     sect05left.style.animation = "left02 1s ease-out forwards";
 //   }
 // });
+$(".hamburger").click(function () {
+  $("body").addClass("notScroll");
+});
+
+$(".nav_cross").click(function () {
+  $("body").removeClass("notScroll");
+});
 
 $(".shadow").mouseup(function (e) {
   if ($(".popup_box").has(e.target).length === 0) {
@@ -367,6 +374,9 @@ $(".sect04 ul li:first-child").click(function () {
 
 $(".sect04 ul li:nth-child(2)").click(function () {
   $(".sect04 .swiper-pagination-bullet:nth-child(2)").trigger("click");
+});
+$(".sect04 ul li:nth-child(3)").click(function () {
+  $(".sect04 .swiper-pagination-bullet:nth-child(3)").trigger("click");
 });
 
 //스크롤 막기

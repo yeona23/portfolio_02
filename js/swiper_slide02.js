@@ -162,6 +162,13 @@ sect04_swiper.on("slideChange", function () {
   ) {
     $(".sect04 ul li:nth-child(2)").addClass("active");
   }
+  if (
+    $(".swiper-pagination-bullet:nth-child(3)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".sect04 ul li:nth-child(3)").addClass("active");
+  }
 });
 
 // var clickEvent = $('#ddkaBtn').on('click', function() {
