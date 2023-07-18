@@ -893,6 +893,13 @@ main .sect04 {
   position: relative;
   margin-bottom: 450px;
 }
+main .sect04 .detail {
+  font-size: 18px;
+  padding: 8px 20px;
+  background: #6e7d75;
+  color: #f1ede2;
+  border: 2px solid #f1ede2;
+}
 main .sect04 .inner {
   margin-bottom: 15px;
 }
@@ -946,7 +953,7 @@ main .sect04 .scroll_box {
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-  border: 15px solid #f1ede2;
+  border: 5px solid #f1ede2;
 }
 
 main .sect04 .scroll_window a {
@@ -978,23 +985,27 @@ main .sect04 .scroll_roll img {
 }
 
 main .sect04 .scroll_window a:hover .scroll_roll {
-  filter: brightness(0.7);
+  filter: brightness(0.5);
+  animation-play-state: paused;
+}
+main .sect04 .sect04_roll a:hover .scroll_roll {
+  filter: brightness(0.5);
   animation-play-state: paused;
 }
 
-main .sect04 .scroll_window p {
+main .sect04 .scroll_window .detail {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f1ede2;
   font-family: "SCoreDream";
-  font-size: 1.5em;
+  font-size: 18px;
   font-weight: 200;
   display: none;
 }
 
-main .sect04 .scroll_window:hover p {
+main .sect04 .scroll_window:hover .detail {
   display: block;
 }
 
@@ -1007,7 +1018,7 @@ main .sect04 .scroll_window02 .scroll_box {
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-  border: 15px solid #f1ede2;
+  border: 5px solid #f1ede2;
 }
 
 main .sect04 .scroll_window02 a {
@@ -1039,22 +1050,26 @@ main .sect04 .scroll_window02 .scroll_roll img {
 }
 
 main .sect04 .scroll_window02 a:hover .scroll_roll {
-  filter: brightness(0.7);
+  filter: brightness(0.5);
   animation-play-state: paused;
 }
-main .sect04 .scroll_window02 p {
+main .sect04 .sect04_roll a:hover .scroll_roll {
+  filter: brightness(0.5);
+  animation-play-state: paused;
+}
+main .sect04 .scroll_window02 .detail {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f1ede2;
   font-family: "SCoreDream";
-  font-size: 1.5em;
+  font-size: 18px;
   font-weight: 200;
   display: none;
 }
 
-main .sect04 .scroll_window02:hover p {
+main .sect04 .scroll_window02:hover .detail {
   display: block;
 }
 
@@ -1067,7 +1082,7 @@ main .sect04 .scroll_window03 .scroll_box {
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-  border: 15px solid #f1ede2;
+  border: 5px solid #f1ede2;
 }
 
 main .sect04 .scroll_window03 a {
@@ -1099,22 +1114,22 @@ main .sect04 .scroll_window03 .scroll_roll img {
 }
 
 main .sect04 .scroll_window03 a:hover .scroll_roll {
-  filter: brightness(0.7);
+  filter: brightness(0.5);
   animation-play-state: paused;
 }
-main .sect04 .scroll_window03 p {
+main .sect04 .scroll_window03 .detail {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f1ede2;
   font-family: "SCoreDream";
-  font-size: 1.5em;
+  font-size: 18px;
   font-weight: 200;
   display: none;
 }
 
-main .sect04 .scroll_window03:hover p {
+main .sect04 .scroll_window03:hover .detail {
   display: block;
 }
 
